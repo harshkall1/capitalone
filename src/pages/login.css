@@ -1,0 +1,196 @@
+/* General styles for images inside .login-main */
+*{
+    box-sizing: border-box;
+}
+.login-main img {
+    width: 100%;
+    max-width: 100%;
+}
+
+/* Container for the login form */
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+}
+
+/* Styles for the login form */
+.login-form {
+    padding: 20px;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
+/* Alternate form style (if needed) */
+.login-form1 {
+    padding: 20px;
+    width: 100%;
+    max-width: 600px; /* Limits form width on larger screens */
+    margin: 0;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+
+/* Heading inside the login form */
+.login-form h2 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Styles for form groups */
+.login-form-group {
+    text-align: left;
+}
+
+/* Label styles */
+.login-label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+    font-size: 12px;
+}
+
+/* Input field styles */
+.input-bx {
+    padding: 5px 5px !important;
+    border: 1px solid #000 !important;
+    border-radius: none !important;
+    background-color: #fff;
+    display: flex;
+    width: 100%;
+}
+.input-bx img { 
+    max-width: 24px;
+    object-fit: contain;
+}
+
+.login-input {
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    padding: 0 5px;
+}
+
+/* Styles for form options (e.g., remember me, help links) */
+.login-form-options {
+    display: flex;
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+/* Styles for labels inside form options */
+.login-form-options label {
+    display: flex;
+    align-items: center;
+    color: #333;
+}
+
+/* Styles for checkboxes inside form options */
+.login-form-options input {
+    margin-right: 8px;
+}
+
+/* Styles for the sign-in button */
+.login-sign-in-button {
+    max-width: 120px;
+    width: 100%;
+    padding: 9px;
+    background-color: #0276b1;
+    color: white;
+    border: none;
+    cursor: pointer;
+    max-height: fit-content;
+    font-size: 16px;
+}
+
+/* Hover effect for the sign-in button */
+.login-sign-in-button:hover {
+    background-color: #016394;
+}
+
+/* Styles for the remember me checkbox container */
+.login-remember-me-bx {
+    display: flex;
+    width: 100%;
+    font-size: 12px;
+    margin-top: 12px;
+}
+
+/* Styles for help links */
+.login-help-links {
+    margin-top: 15px;
+    text-align: left;
+    font-size: 12px;
+}
+
+/* Styles for links inside help links */
+.login-help-links a {
+    display: block;
+    margin-bottom: 10px;
+    color: #0276b1;
+    text-decoration: none;
+}
+
+/* Hover effect for help links */
+.login-help-links a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .login-form{
+        max-width: 100%;
+        padding: 30px;
+    }
+    .login-inner-container{
+        width: 100%;
+    }
+    .login-form-options{
+        margin-bottom: 0;
+    }
+    .login-form, .login-form1 {
+        flex-direction: column; /* Stack elements vertically on smaller screens */
+        gap: 20px; /* Reduce gap for better spacing */
+        padding: 15px; /* Slightly reduce padding */
+    }
+
+    .login-sign-in-button {
+        max-width: 100%; /* Full width button on mobile */
+    }
+
+    .login-form-options {
+        flex-direction: column; /* Stack options vertically */
+        align-items: flex-start;
+    }
+
+    .login-help-links {
+        text-align: center; /* Center help links on smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .login-form h2 {
+        font-size: 1.5em; /* Reduce heading size on very small screens */
+    }
+
+    .login-label, .login-remember-me-bx, .login-help-links {
+        font-size: 10px; /* Smaller text for mobile */
+    }
+
+    .login-sign-in-button {
+        font-size: 14px; /* Adjust button text size */
+    }
+
+    .input-bx img {
+        max-width: 20px; /* Slightly smaller icons */
+    }
+}
