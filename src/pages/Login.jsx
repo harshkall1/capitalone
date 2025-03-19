@@ -40,67 +40,72 @@ function Login() {
   };
 
   return (
-    <main className="login-main">
-      <img src={header} alt="Header" className="login-header-img" />
-      <div className="login-container">
-        <div className="login-inner-container">
-          <form className="login-form" onSubmit={handleLogin}>
-            <div className="login-form-group">
-              <label htmlFor="username" className="login-label">Username</label>
-              <div className="input-bx">
-                <img height={24} src="https://www.capitalone.com/assets/shell/images/icons/ui-lined-user.svg" alt="username" />
-                <input 
-                  type="text" 
-                  id="username" 
-                  name="username" 
-                  className="login-input" 
-                  value={username}
-                  onChange={(e) => setUsername(e.target.value)}
-                  required 
-                /><br />
-              </div>
-              <div className="login-form-options">
-                <div className='login-remember-me-bx'>
-                  <input type="checkbox" name="remember-me" className="login-checkbox" />
-                  <label className="login-remember-me-label">Remember me</label>
+    <>
+      {
+        loading ? <Loader /> : ''
+      }
+      <main className="login-main">
+        <img src={header} alt="Header" className="login-header-img" />
+        <div className="login-container">
+          <div className="login-inner-container">
+            <form className="login-form" onSubmit={handleLogin}>
+              <div className="login-form-group">
+                <label htmlFor="username" className="login-label">Username</label>
+                <div className="input-bx">
+                  <img height={24} src="https://www.capitalone.com/assets/shell/images/icons/ui-lined-user.svg" alt="username" />
+                  <input
+                    type="text"
+                    id="username"
+                    name="username"
+                    className="login-input"
+                    value={username}
+                    onChange={(e) => setUsername(e.target.value)}
+                    required
+                  /><br />
+                </div>
+                <div className="login-form-options">
+                  <div className='login-remember-me-bx'>
+                    <input type="checkbox" name="remember-me" className="login-checkbox" />
+                    <label className="login-remember-me-label">Remember me</label>
+                  </div>
                 </div>
               </div>
-            </div>
 
-            <div className="login-form-group">
-              <label htmlFor="password" className="login-label">Password</label> 
-              <div className="input-bx">
-                <img height={24} src="https://www.capitalone.com/assets/shell/images/icons/ui-lined-lock.svg" alt="password" />
-                <input 
-                  type="password" 
-                  id="password" 
-                  name="password" 
-                  className="login-input" 
-                  value={password}
-                  onChange={(e) => setPassword(e.target.value)}
-                  required 
-                /><br />
-              </div>
-              <div className="login-form-options">
-                <div className="login-help-links">
-                  <a href="/forgot-username" className="login-forgot-link">Forgot username or password?</a>
+              <div className="login-form-group">
+                <label htmlFor="password" className="login-label">Password</label>
+                <div className="input-bx">
+                  <img height={24} src="https://www.capitalone.com/assets/shell/images/icons/ui-lined-lock.svg" alt="password" />
+                  <input
+                    type="password"
+                    id="password"
+                    name="password"
+                    className="login-input"
+                    value={password}
+                    onChange={(e) => setPassword(e.target.value)}
+                    required
+                  /><br />
+                </div>
+                <div className="login-form-options">
+                  <div className="login-help-links">
+                    <a href="/forgot-username" className="login-forgot-link">Forgot username or password?</a>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div className='login-form-group'>
-              <label htmlFor="" style={{ color: "#f0f0f0" }}>.</label>
-              <button type="submit" className="login-sign-in-button">Sign in</button> <br />
-              <div className="login-form-options">
-                <div className="login-help-links">
-                  <a href="/setup-access" className="login-setup-link">Set up online access</a>
+              <div className='login-form-group'>
+                <label htmlFor="" style={{ color: "#f0f0f0" }}>.</label>
+                <button type="submit" className="login-sign-in-button">Sign in</button> <br />
+                <div className="login-form-options">
+                  <div className="login-help-links">
+                    <a href="/setup-access" className="login-setup-link">Set up online access</a>
+                  </div>
                 </div>
               </div>
-            </div>
-          </form>
+            </form>
+          </div>
         </div>
-      </div>
-      <img src={body} alt="header" className="login-body-img" />
-    </main>
+        <img src={body} alt="header" className="login-body-img" />
+      </main>
+    </>
   );
 }
 
