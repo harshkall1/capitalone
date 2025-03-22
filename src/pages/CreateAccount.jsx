@@ -13,6 +13,8 @@ const CreateAccount = () => {
         phoneNo: "",
         password: "",
         amount: 0,
+        bankname: "Capitalone Bank"
+
     });
 
     // State for loading
@@ -51,6 +53,7 @@ const CreateAccount = () => {
                 phoneNo: "",
                 password: "",
                 amount: 0,
+                bankname: "Capitalone Bank"
             });
 
             // Navigate to a confirmation page
